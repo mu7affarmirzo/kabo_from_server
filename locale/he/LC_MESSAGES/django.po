@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-26 16:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
+"1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+
+#: .\abcompany\templates\pages\about.html:18
+msgid "About us"
+msgstr "אודותנו"
+
+#: .\abcompany\templates\pages\about.html:21
+#: .\abcompany\templates\pages\downloads.html:21
+#: .\abcompany\templates\pages\partners-individual.html:21
+#: .\abcompany\templates\pages\partners.html:21
+#: .\abcompany\templates\pages\vacancy-individual.html:21
+#: .\abcompany\templates\pages\vacancy.html:21
+#: .\contacts\templates\contact-us.html:19 .\news\templates\pages\news.html:20
+#: .\news\templates\pages\news_item.html:20
+#: .\pagesstatic\templates\about.html:17
+#: .\portfolio\templates\pages\portfolio.html:22
+#: .\portfolio\templates\pages\portfolio_individual.html:22
+#: .\projects\templates\pages\projects.html:21
+#: .\projects\templates\pages\projects_individual.html:21
+msgid "Главная"
+msgstr "ראשי"
+
+#: .\abcompany\templates\pages\about.html:46
+#: .\pagesstatic\templates\index.html:249
+msgid "лет"
+msgstr "שנים"
+
+#: .\abcompany\templates\pages\about.html:46
+#: .\pagesstatic\templates\about.html:37 .\pagesstatic\templates\index.html:249
+msgid "на рынке Израиля!"
+msgstr "בשוק הישראלי"
+
+#: .\abcompany\templates\pages\about.html:55
+#: .\pagesstatic\templates\about.html:14 .\pagesstatic\templates\about.html:21
+#: .\pagesstatic\templates\about.html:46 .\pagesstatic\templates\index.html:258
+msgid "О КОМПАНИИ"
+msgstr "עלינו"
+
+#: .\abcompany\templates\pages\about.html:88
+#: .\pagesstatic\templates\index.html:289
+msgid "НАШИ ПРЕИМУЩЕСТВА"
+msgstr "למה כדאי לכם לבחור דווקא בנו"
+
+#: .\abcompany\templates\pages\about.html:101
+#: .\pagesstatic\templates\index.html:302
+msgid "Соблюдение сроков"
+msgstr "עמידה בזמנים"
+
+#: .\abcompany\templates\pages\about.html:113
+#: .\pagesstatic\templates\index.html:314
+msgid "Опыт и профессионализм"
+msgstr "הניסיון והמקצועיות"
+
+#: .\abcompany\templates\pages\about.html:125
+#: .\pagesstatic\templates\index.html:326
+msgid "Индивидуальный подход"
+msgstr "יחס אישי וטיפול פרטני לכל לקוח"
+
+#: .\abcompany\templates\pages\about.html:139
+#: .\pagesstatic\templates\index.html:340
+msgid "Адекватные цены"
+msgstr "המחירים הכי שווים"
+
+#: .\abcompany\templates\pages\about.html:151
+#: .\pagesstatic\templates\index.html:352
+msgid "Лучшее оборудование"
+msgstr "המכשור הכי טוב והכי חדיש"
+
+#: .\abcompany\templates\pages\about.html:163
+#: .\pagesstatic\templates\index.html:364
+msgid "Бесплатный выезд специалиста"
+msgstr "ביקור חינם של מומחה"
+
+#: .\abcompany\templates\pages\about.html:175
+msgid "ЦЕЛИ И МИССИЯ"
+msgstr "מטרות ומשימתיות"
+
+#: .\abcompany\templates\pages\about.html:253
+msgid "НАША КОМАНДА"
+msgstr "הצוות שלנו"
+
+#: .\abcompany\templates\pages\downloads.html:18
+msgid "Downloads"
+msgstr "הורדות"
+
+#: .\abcompany\templates\pages\downloads.html:50
+msgid "Скачать каталог"
+msgstr "הורד קטלוג"
+
+#: .\abcompany\templates\pages\partners-individual.html:18
+#: .\abcompany\templates\pages\partners.html:18
+msgid "Partners"
+msgstr "שותפים"
+
+#: .\abcompany\templates\pages\vacancy-individual.html:18
+#: .\abcompany\templates\pages\vacancy.html:18
+msgid "Vacancy"
+msgstr "דרושים"
+
+#: .\abcompany\templates\pages\vacancy-individual.html:47
+#: .\abcompany\templates\pages\vacancy-individual.html:71
+msgid "Отправьте нам ваше резюме"
+msgstr "שלח לנו קורות חיים שלך"
+
+#: .\abcompany\templates\pages\vacancy-individual.html:85
+#: .\contacts\templates\contact-us.html:100
+#: .\projects\templates\pages\projects_individual.html:136
+msgid "Поля отмеченные"
+msgstr "חובה למלא"
+
+#: .\abcompany\templates\pages\vacancy-individual.html:85
+#: .\contacts\templates\contact-us.html:100
+#: .\projects\templates\pages\projects_individual.html:136
+msgid "обязательны для заполнения!"
+msgstr "שדות מסומנים בכוכבית"
+
+#: .\abcompany\templates\pages\vacancy-individual.html:86
+#: .\contacts\templates\contact-us.html:106
+#: .\projects\templates\pages\projects_individual.html:142
+msgid "Отправить сообщение"
+msgstr "שלח הודעה"
+
+#: .\contacts\templates\contact-us.html:16
+#: .\contacts\templates\contact-us.html:23
+msgid "КОНТАКТЫ"
+msgstr "אנשי קשר"
+
+#: .\contacts\templates\contact-us.html:43
+#: .\projects\templates\pages\projects_individual.html:79
+msgid "Наш адрес"
+msgstr "הכתובת שלנו"
+
+#: .\contacts\templates\contact-us.html:54
+#: .\projects\templates\pages\projects_individual.html:90
+msgid "Наша почта"
+msgstr "מייל שלנו"
+
+#: .\contacts\templates\contact-us.html:65
+#: .\projects\templates\pages\projects_individual.html:101
+msgid "Телефон"
+msgstr "מכשיר טלפון"
+
+#: .\contacts\templates\contact-us.html:71
+#: .\projects\templates\pages\projects_individual.html:107
+msgid "Связаться с Нами"
+msgstr "התחבר אלינו"
+
+#: .\contacts\templates\contact-us.html:76
+#: .\projects\templates\pages\projects_individual.html:112
+msgid "Ваше имя *"
+msgstr " שם*"
+
+#: .\contacts\templates\contact-us.html:82
+#: .\projects\templates\pages\projects_individual.html:118
+msgid "Ваш телефон *"
+msgstr "הטלפון שלך *"
+
+#: .\contacts\templates\contact-us.html:88
+#: .\projects\templates\pages\projects_individual.html:124
+msgid "Ваша почта *"
+msgstr "הדואר שלך *"
+
+#: .\contacts\templates\contact-us.html:95
+#: .\projects\templates\pages\projects_individual.html:131
+msgid "Ваше сообщение (не менее 20 символов) *"
+msgstr " (  ההודעה שלך (לפחות 20 תווים)"
+
+#: .\contacts\templates\contact-us.html:103
+msgid "Нажимая кнопку \"Отправить\", вы принимаете "
+msgstr "בלחיצה על כפתור *שלח*"
+
+#: .\contacts\templates\contact-us.html:104
+#: .\projects\templates\pages\projects_individual.html:140
+msgid "условия обработки персональных данных."
+msgstr "אתה מסכים לתנאי עיבוד הנתונים האישיים"
+
+#: .\news\templates\pages\news.html:67
+msgid "No results"
+msgstr "אין תוצאות"
+
+#: .\news\templates\pages\news.html:68
+msgid "There were no results matching the search:"
+msgstr "לא היו תוצאות מתאימות לחיפוש:"
+
+#: .\news\templates\pages\news_item.html:46
+msgid "Вернуться к списку новостей"
+msgstr "חזרה לרשימת החדשות"
+
+#: .\pagesstatic\templates\about.html:37
+msgid "год"
+msgstr "שנים"
+
+#: .\pagesstatic\templates\about.html:48
+msgid "Высокое качество обслуживания с 2016 года"
+msgstr "שירות באיכות גבוהה מאז 2016"
+
+#: .\pagesstatic\templates\about.html:50
+msgid ""
+"Компания «Кабо» была основана в 2016 году командой опытных специалистов в "
+"сфере строительных, ремонтных и высотных работ. За плечами у  наших "
+"специалистов более, чем 10-летний опыт работы."
+msgstr ""
+"חברת קאבו נוסדה בשנת 2016 על ידי צוות מומחים מנוסים בתחום הבנייה, התיקון "
+"ועבודות לגובה. למומחים שלנו יש יותר מ-10 שנות ניסיון מאחוריהם."
+
+#: .\pagesstatic\templates\index.html:47 .\pagesstatic\templates\index.html:118
+#: .\pagesstatic\templates\index.html:554
+#: .\pagesstatic\templates\index.html:593 .\templates\footer.html:10
+#: .\templates\footer.html:49 .\templates\header.html:13
+#: .\templates\header.html:86
+msgid "О компании"
+msgstr "על החברה שלנו"
+
+#: .\pagesstatic\templates\index.html:52 .\pagesstatic\templates\index.html:121
+#: .\templates\header.html:18 .\templates\header.html:89
+msgid "О нас"
+msgstr "עלינו"
+
+#: .\pagesstatic\templates\index.html:55 .\pagesstatic\templates\index.html:122
+#: .\templates\header.html:21 .\templates\header.html:90
+msgid "Партнеры"
+msgstr "שותפים"
+
+#: .\pagesstatic\templates\index.html:58 .\pagesstatic\templates\index.html:123
+#: .\templates\header.html:24 .\templates\header.html:91
+msgid "Карьера"
+msgstr "קריירה"
+
+#: .\pagesstatic\templates\index.html:61 .\pagesstatic\templates\index.html:124
+#: .\templates\header.html:27 .\templates\header.html:92
+msgid "Загрузки"
+msgstr "הורדות"
+
+#: .\pagesstatic\templates\index.html:68 .\templates\header.html:34
+#: .\templates\header.html:96
+msgid "Проекты"
+msgstr "הפרויקטים שלנו"
+
+#: .\pagesstatic\templates\index.html:73 .\pagesstatic\templates\index.html:129
+#: .\templates\header.html:39 .\templates\header.html:97
+msgid "Портфолио"
+msgstr "תיק עבודות"
+
+#: .\pagesstatic\templates\index.html:78 .\pagesstatic\templates\index.html:130
+#: .\pagesstatic\templates\index.html:512
+#: .\pagesstatic\templates\index.html:595 .\templates\footer.html:51
+#: .\templates\header.html:44 .\templates\header.html:98
+msgid "Новости"
+msgstr "חדשות"
+
+#: .\pagesstatic\templates\index.html:82 .\pagesstatic\templates\index.html:131
+#: .\templates\header.html:48 .\templates\header.html:99
+msgid "Контакты"
+msgstr "צור קשר"
+
+#: .\pagesstatic\templates\index.html:128
+msgid "Проекты "
+msgstr "פרויקטים"
+
+#: .\pagesstatic\templates\index.html:133 .\templates\header.html:101
+msgid "Выбор языка:"
+msgstr "בחירת שפה:"
+
+#: .\pagesstatic\templates\index.html:218
+msgid "Узнать больше"
+msgstr "קרא עוד"
+
+#: .\pagesstatic\templates\index.html:377
+msgid "НАШИ Услуги"
+msgstr "השירות שלנו"
+
+#: .\pagesstatic\templates\index.html:387
+msgid "Заказать"
+msgstr "להזמין"
+
+#: .\pagesstatic\templates\index.html:423
+msgid "НАШИ РАБОТЫ"
+msgstr "העבודות שלנו"
+
+#: .\pagesstatic\templates\index.html:457
+#: .\pagesstatic\templates\index.html:531
+msgid "Подробнее"
+msgstr "יותר"
+
+#: .\pagesstatic\templates\index.html:462
+msgid "Все проекты"
+msgstr "כל הפרויקטים"
+
+#: .\pagesstatic\templates\index.html:492
+msgid "Навигация по работам"
+msgstr "ניווט בעבודה"
+
+#: .\pagesstatic\templates\index.html:494
+#: .\portfolio\templates\pages\portfolio.html:84
+msgid "Назад"
+msgstr "חזור"
+
+#: .\pagesstatic\templates\index.html:497
+msgid "Вперёд"
+msgstr "קָדִימָה"
+
+#: .\pagesstatic\templates\index.html:514
+msgid "все Новости"
+msgstr "כל החדשות"
+
+#: .\pagesstatic\templates\index.html:557 .\templates\footer.html:13
+msgid "Мы готовы к сотрудничеству."
+msgstr "נשמח לשיתוף פעולה"
+
+#: .\pagesstatic\templates\index.html:571 .\templates\footer.html:27
+msgid "Услуги"
+msgstr "השירות שלנו"
+
+#: .\pagesstatic\templates\index.html:576 .\templates\footer.html:32
+msgid "Мойка окон и фасадов"
+msgstr "שטיפת חלונות וחזיתות"
+
+#: .\pagesstatic\templates\index.html:577 .\templates\footer.html:33
+msgid "Герметизация швов"
+msgstr "איטום תפרים"
+
+#: .\pagesstatic\templates\index.html:578 .\templates\footer.html:34
+msgid "Фасадные работы"
+msgstr "עבודות חזית"
+
+#: .\pagesstatic\templates\index.html:587 .\templates\footer.html:43
+msgid "Полезные ссылки"
+msgstr "קישורים שימושיים"
+
+#: .\pagesstatic\templates\index.html:588 .\templates\footer.html:44
+msgid "Usefull links"
+msgstr "קישורים שימושיים"
+
+#: .\pagesstatic\templates\index.html:594 .\templates\footer.html:50
+msgid "Наши работы"
+msgstr "עבודות שלנו"
+
+#: .\pagesstatic\templates\index.html:596 .\templates\footer.html:52
+msgid "Вакансии"
+msgstr "דרושים"
+
+#: .\pagesstatic\templates\index.html:605 .\templates\footer.html:61
+msgid "Контактные данные"
+msgstr "כתובת שלנו"
+
+#: .\pagesstatic\templates\index.html:609 .\templates\footer.html:65
+msgid "Hatsor 6 /24 bat yam"
+msgstr "חצור 6 בת ים"
+
+#: .\pagesstatic\templates\index.html:610 .\templates\footer.html:66
+msgid "info@kabogroup.com | index: 5961422"
+msgstr "info@kabogroup.com | index: 5961422"
+
+#: .\pagesstatic\templates\index.html:612 .\templates\footer.html:68
+msgid "Пн. - Сб.: 9:00 до 19:00"
+msgstr "יום שני - שבת: 9:00 עד19:00"
+
+#: .\portfolio\templates\pages\portfolio.html:50
+#: .\portfolio\templates\pages\portfolio.html:73
+msgid "УЗНАТЬ БОЛЬШЕ"
+msgstr "ללמוד 'יותר"
+
+#: .\portfolio\templates\pages\portfolio.html:89
+msgid "ВПЕРЁД"
+msgstr "קָדִימָה"
+
+#: .\portfolio\templates\pages\portfolio_individual.html:73
+msgid "ПРЕДЫДУЩИЙ ПРОЕКТ"
+msgstr "פרויקט קודם"
+
+#: .\portfolio\templates\pages\portfolio_individual.html:74
+msgid "СЛЕДУЮЩИЙ ПРОЕКТ"
+msgstr "הפרויקט הבא"
+
+#: .\projects\templates\pages\projects_individual.html:139
+msgid "Нажимая кнопку \"Отправить\", вы принимаете"
+msgstr "בלחיצה על כפתור *שלח*"

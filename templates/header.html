@@ -1,0 +1,134 @@
+{% load static %}
+{% load i18n %}
+<nav class="navigation">
+    <a href="{% url 'home' %}" class="navigation_logo"><img src="{% static 'img/logo-full.png' %}" alt=""></a>
+    <button class="menu_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="navigation_list">
+        <li class="navigation_items">
+            <span class="navigation_link">
+                {% trans 'О компании' %}
+            </span>
+            <div class="navigation_dropdown">
+                <ul>
+                    <li>
+                        <a href="{% url 'about:about-us'%}">{% trans 'О нас' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about:partners' %}">{% trans 'Партнеры' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about:vacancy' %}">{% trans 'Карьера' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about:downloads' %}">{% trans 'Загрузки' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="navigation_items">
+            <a href="{% url 'projects:projects' %}" class="navigation_link">
+                {% trans 'Проекты' %}
+            </a>
+        </li>
+        <li class="navigation_items">
+            <a href="{% url 'portfolio:portfolio' %}" class="navigation_link">
+                {% trans 'Портфолио' %}
+            </a>
+        </li>
+        <li class="navigation_items">
+            <a href="{% url 'news:news' %}" class="navigation_link">
+                {% trans 'Новости' %}
+            </a>
+        </li>
+        <li class="navigation_items">
+            <a href="{% url 'contacts:contacts' %}" class="navigation_link">{% trans 'Контакты' %}</a>
+        </li>
+
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+            <li class="navigation_items">
+                <span href="" class="navigation_link lang_link">
+                    {{ LANGUAGE_CODE }} <span>&#9660;</span>
+                </span>
+                <div class="navigation_dropdown lang_dropdown">
+                    <input name="next" type="hidden" value="{{ request.get_full_path}}" />
+                    <ul class="nav navbar-nav navbar-right language menu">
+
+                        {% for language in languages %}
+                            <li>
+                                <button type="submit"
+                                        name="language"
+                                        value="{{ language.code }}"
+                                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                                    {{ language.name_local }}
+                                </button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        </form>
+
+    </ul>
+</nav>
+<!-- responsive mobile menu -->
+<div class="mobile_menu">
+    <ul class="link_list">
+        <li>
+            <a href="#demo" data-toggle="collapse">{% trans "О компании" %}</a>
+            <div id="demo" class="collapse">
+                <div class="collapse_list">
+                    <a href="{% url 'about:about-us' %}">{% trans "О нас" %}</a>
+                    <a href="{% url 'about:partners' %}">{% trans "Партнеры" %}</a>
+                    <a href="{% url 'about:vacancy' %}">{% trans "Карьера" %}</a>
+                    <a href="{% url 'about:downloads' %}">{% trans "Загрузки" %}</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="{% url 'projects:projects' %}">{% trans 'Проекты' %}</a></li>
+        <li><a href="{% url 'portfolio:portfolio' %}">{% trans 'Портфолио' %}</a></li>
+        <li><a href="{% url 'news:news' %}">{% trans 'Новости' %}</a></li>
+        <li><a href="{% url 'pagesstatic:contacts' %}">{% trans 'Контакты' %}</a></li>
+    </ul>
+    <p>{% trans 'Выбор языка:' %}</p>
+    <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+
+        <!-- <li class="navigation_items">
+            <span href="" class="navigation_link lang_link">
+                {{ LANGUAGE_CODE }} <span>&#9660;</span>
+            </span>
+            <input name="next" type="hidden" value="{{ request.get_full_path}}" /> -->
+            <ul class="lang_list">
+                {% for language in languages %}
+                    <li>
+                        <button type="submit"
+                                name="language"
+                                value="{{ language.code }}"
+                                class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                            {{ language.name_local }}
+                        </button>
+                        
+                    </li>
+                {% endfor %}
+            </ul>
+        <!-- </li> -->
+    </form>
+    <ul class="social_icons">
+        <li><a href=""><img src="{% static 'img/facebook-w.svg' %}" alt=""></a></li>
+        <li><a href=""><img src="{% static 'img/telegram-w.svg' %}" alt=""></a></li>
+        <li><a href=""><img src="{% static 'img/instagram-w.svg' %}" alt=""></a></li>
+        <li><a href=""><img src="{% static 'img/whatsapp-w.svg' %}" alt=""></a></li>
+    </ul>
+</div>

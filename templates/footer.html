@@ -1,0 +1,75 @@
+{% load static %}
+{% load i18n %}
+<div class="footer">
+    <div class="footer_inner">
+        <div class="container">
+            <div class="row footer_top">
+                <div class="col-md-3">
+                    <div class="footer_items">
+                        <div class="footer_title">
+                            {% trans 'О компании' %}
+                        </div>
+                        <div class="footer_content">
+                            <p>{% trans 'Мы готовы к сотрудничеству.' %}</p>
+                            <ul class="social_icons">
+                                <li><a href=""><img src="{% static 'img/facebook-w.svg' %}" alt=""></a></li>
+                                <li><a href=""><img src="{% static 'img/telegram-w.svg' %}" alt=""></a></li>
+                                <li><a href=""><img src="{% static 'img/instagram-w.svg' %}" alt=""></a></li>
+                                <li><a href=""><img src="{% static 'img/whatsapp-w.svg' %}" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_items">
+                        <div class="footer_items">
+                            <div class="footer_title">
+                                {% trans 'Услуги' %}
+                            </div>
+                        </div>
+                        <div class="footer_content">
+                            <ul class="footer_links">
+                                <li><a href="{% url 'portfolio:portfolio' %}">{% trans 'Мойка окон и фасадов' %}</a></li>
+                                <li><a href="{% url 'portfolio:portfolio' %}">{% trans 'Герметизация швов' %}</a></li>
+                                <li><a href="{% url 'portfolio:portfolio' %}">{% trans 'Фасадные работы' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_items">
+                        <div class="footer_items">
+                            <div class="footer_title">
+                                <!-- {% trans 'Полезные ссылки' %} -->
+                                {% trans 'Usefull links' %}
+                            </div>
+                        </div>
+                        <div class="footer_content">
+                            <ul class="footer_links">
+                                <li><a href="{% url 'about:about-us' %}">{% trans 'О компании' %}</a></li>
+                                <li><a href="{% url 'projects:projects' %}">{% trans 'Наши работы' %}</a></li>
+                                <li><a href="{% url 'news:news' %}">{% trans 'Новости' %}</a></li>
+                                <li><a href="">{% trans 'Вакансии' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_items">
+                        <div class="footer_items">
+                            <div class="footer_title">
+                                {% trans 'Контактные данные' %}
+                            </div>
+                        </div>
+                        <ul class="footer_contacts">
+                            <li><a href="">{% trans 'Hatsor 6 /24 bat yam' %}</a></li>
+                            <li><a href="">{% trans 'info@kabogroup.com | index: 5961422' %}</a></li>
+                            <li><a href="">0586723477 <br> 0586366500</a></li>
+                            <li><a href="">{% trans 'Пн. - Сб.: 9:00 до 19:00' %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

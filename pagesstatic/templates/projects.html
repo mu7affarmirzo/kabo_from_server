@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+    <header class="header_promo other_pages_header">
+        <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+        <div class="video_overlay"></div>
+        <div class="header_promo_video">
+            <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none"
+                src="{% static 'promo/promo_header.mp4'%}"></video>
+        </div>
+        <div class="header_promo_title">
+            <h1><span>НАПРАВЛЕНИЯ КОМПАНИИ</span></h1>
+            <ul class="header_promo_breadcrumbs">
+                <li>
+                    <a href="{% url 'pagesstatic:home' %}">Главная</a><i>/</i>
+                </li>
+                <li>
+                    <span>
+                        ПРОЕКТЫ
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <section class="projects">
+        <div class="container">
+            <div class="section_content">
+                <div class="projects_list">
+                    <div class="projects_item first_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Высотные работы</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item second_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Чистка камня</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item first_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Гидроизоляция</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item second_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Фасадные работы</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item first_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Герметизация швов</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item second_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Мойка окон и фасадов</h5>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="projects_item first_animation invisible">
+                        <a href="">
+                            <span class="projects_img">
+                                <img src="{% static 'img/about.jpg' %}" alt="">
+                            </span>
+                            <span class="projects_caption">
+                                <h5>Реставрация здания</h5>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

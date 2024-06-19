@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <header class="header_promo other_pages_header">
+        {% for prom in promo %}
+        <div class="header_promo_background" style="background-image: url('{{prom.image.url}}')"></div>
+        <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                    <source src="{{prom.promoURL}}" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{{prom.name}}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <a href="{% url 'news:news' %}">{{prom.name}}</a><i>/</i>
+                    </li>
+                    <li>
+                        <a href="">{{news_post.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </header>
+
+        <!-- news section -->
+        <section class="news">
+            <div class="container">
+                <div class="section_content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="news_individual">
+                                <img src="{{news_post.image.url}}" alt="">
+                                <p class="news_date"> <span>Kabo Primer </span>/ {{news_post.date_published}} </p>
+                                <h2 class="news_title">{{news_post.name}}</h2>
+                                <p>
+                                    {{news_post.text|safe}}
+                                </p>
+                                <a href="{% url 'news:news' %}" class="active-btn mt-3"><span>{% trans 'Вернуться к списку новостей' %}</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            {% for prom in promo %}
+                <div class="header_promo_video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                        <source src="{{prom.promoURL}}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="header_promo_title">
+                    <h1><span>{% trans 'Vacancy' %}</span></h1>
+                    <ul class="header_promo_breadcrumbs">
+                        <li>
+                            <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                        </li>
+                        <li>
+                            <span>
+                                {{prom.title}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </header>
+
+
+
+
+    <section class="vacancy">
+        <div class="container">
+            <div class="section_content">
+                <p class="vacancy_time">{{ vacancy.little_description}}</p>
+                <h1 class="vacancy_title">{{ vacancy.position }}</h1>
+                <div class="vacancy_img my-5 w-100">
+                    <img class="w-100" src="{{ vacancy.imageUrl}}" alt="">
+                </div>
+                <p>
+                    {{ vacancy.description|safe}}
+                </p>
+                <h1 class="vacancy_title mt-5">{% trans 'Отправьте нам ваше резюме' %}</h1>
+
+                <form action="{% url 'abcompany:send-cv' %}" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="row contacts">
+                        <div class="col-md-3 mt-4">
+                            <div class="contacts_input name">
+                                <input name="full_name" id="name" type="text" placeholder="Ваше имя *"
+                                    required="required">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4">
+                            <div class="contacts_input phone">
+                                <input id="phone" name="phone_number" type="tel" placeholder="Ваш телефон *"
+                                    minlength="10" maxlength="17" required="required">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4">
+                            <div class="contacts_input email">
+                                <input name="email" type="text" placeholder="Ваша почта *" required="required">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4">
+                            <div class="contacts_input filetype">
+                                <label for="filetype"> {% trans 'Отправьте нам ваше резюме' %}Выберите файлы * </label>
+                                <input name="cv" type="file" id="filetype" multiple
+                                    placeholder="Выберите файлы *" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="contacts_input message">
+                                <textarea name="message" placeholder="Ваше сообщение (не менее 20 символов) *"
+                                    minlength="20" required="required"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">{% trans 'Поля отмеченные' %} <span>( * )</span> {% trans 'обязательны для заполнения!' %}</p>
+                    <button type="submit" class="active-btn"><span>{% trans 'Отправить сообщение' %}</span> </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            {% for prom in promo %}
+                <div class="header_promo_video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                        <source src="{{prom.promoURL}}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="header_promo_title">
+                    <h1><span>{% trans 'Downloads' %}</span></h1>
+                    <ul class="header_promo_breadcrumbs">
+                        <li>
+                            <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                        </li>
+                        <li>
+                            <span>
+                                {{prom.title}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </header>
+
+
+        <section class="project_individual">
+            <div class="container">
+                <div class="section_content">
+                    <div class="project_list">
+
+                        {% for download in downloads %}
+                            <div class="project_item project_triangle_before first_animation invisible">
+                                <span class="project_img">
+                                    <img src="{{ download.imageUrl}}" alt="">
+                                </span>
+                                <div class="divisions_item_right">
+                                    <h5 class="company_name long_line_before">{{ download.pre_title}}</h5>
+                                    <h2>{{ download.full_name}}</h2>
+                                    <p class="mb-5">
+                                        {{ download.description}}
+                                    </p>
+                                    <a href="{{ download.fileUrl }}" class="active-btn"> <span> {% trans 'Скачать каталог' %} </span></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

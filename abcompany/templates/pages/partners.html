@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            {% for prom in promo %}
+                <div class="header_promo_video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                        <source src="{{prom.promoURL}}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="header_promo_title">
+                    <h1><span>{% trans 'Partners' %}</span></h1>
+                    <ul class="header_promo_breadcrumbs">
+                        <li>
+                            <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                        </li>
+                        <li>
+                            <span>
+                                {{prom.title}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </header>
+
+
+    <section class="team partners">
+        <div class="container">
+            <ul>
+                {% for partner in partners %}
+                    <li class="team_items">
+                        <a href="{% url 'about:partners-individual' partner.id %}">
+                            <div class="team_img">
+                                <img src="{{ partner.imageUrl}}" alt="">
+                            </div>
+                            <div class="team_caption">
+                                <span>{{ partner.name}}</span>
+                                <small>{{ partner.position}}</small>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <header class="header_promo other_pages_header">
+        <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+        <div class="video_overlay"></div>
+        <div class="header_promo_video">
+            <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none"
+                src="{% static 'promo/promo_header.mp4'%}"></video>
+        </div>
+        <div class="header_promo_title">
+            <h1><span>НОВОСТИ</span></h1>
+            <ul class="header_promo_breadcrumbs">
+                <li>
+                    <a href="{% url 'pagesstatic:home' %}">Главная</a><i>/</i>
+                </li>
+                <li>
+                    <span>
+                        НОВОСТИ
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- news section -->
+    <section class="news">
+        <div class="container">
+            <div class="section_content">
+                <div class="row">
+                    <div class="col-md-4 first_animation invisible">
+                        <div class="news_item">
+                            <a href="">
+                                <div class="news_image">
+                                    <img src="{% static 'img/about.jpg' %}" alt="">
+                                </div>
+                                <div class="news_caption">
+                                    <p class="news_date"> 06 АВГУСТ, 2021 </p>
+                                    <h5>
+                                        Скоро открытие
+                                    </h5>
+                                </div>
+                                <a href="about.html" class="active-btn mt-3"><span>Подробнее</span></a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third_animation invisible">
+                        <div class="news_item">
+                            <a href="">
+                                <div class="news_image">
+                                    <img src="{% static 'img/about.jpg' %}" alt="">
+                                </div>
+                                <div class="news_caption">
+                                    <p class="news_date"> 06 АВГУСТ, 2021 </p>
+                                    <h5>
+                                        Скоро запуск
+                                    </h5>
+                                </div>
+                                <a href="about.html" class="active-btn mt-3"><span>Подробнее</span></a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 second_animation invisible">
+                        <div class="news_item">
+                            <a href="">
+                                <div class="news_image">
+                                    <img src="{% static 'img/about.jpg' %}" alt="">
+                                </div>
+                                <div class="news_caption">
+                                    <p class="news_date"> 06 АВГУСТ, 2021 </p>
+                                    <h5>
+                                        Осталось еще чуть чуть
+                                    </h5>
+                                </div>
+                                <a href="about.html" class="active-btn mt-3"><span>Подробнее</span></a>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="pagi first_animation invisible">
+                    <!-- display НАЗАД in second page -->
+                    <li class="d-none"><a href="">Назад</a></li>
+                    <li class="active"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">ВПЕРЁД</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}

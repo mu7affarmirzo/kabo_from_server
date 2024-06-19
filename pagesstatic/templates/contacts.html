@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none"
+                    src="{% static 'promo/promo_header.mp4'%}"></video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>КОНТАКТЫ</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'pagesstatic:home' %}">Главная</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            КОНТАКТЫ
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="contacts">
+            <div class="container">
+                <div class="section_content">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1782.946758706844!2d69.17202025651547!3d41.27519657510115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8a9c7d09ed%3A0x20882997ae136315!2z0JrQvtC80L_QsNC90LjRjyBBS0ZB!5e0!3m2!1sru!2s!4v1611224350382!5m2!1sru!2s"
+                            width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div class="row my-md-5 my-3">
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/address-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    Наш адрес
+                                </h5>
+                                <span>Hatsor 6 /24 bat yam</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/mail-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    Наша почта
+                                </h5>
+                                <span><a href="mailto:info@akfagroup.com">info@kabogroup.com</a></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/phone-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    Телефон
+                                </h5>
+                                <span><a href="tel:+998 71 203 00 00">0586723477 <br>0586366500</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="contacts_title">Связаться с Нами</h2>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="contacts_input name">
+                                    <input name="f-name" id="name" type="text" placeholder="Ваше имя *"
+                                        required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts_input phone">
+                                    <input id="phone" name="f-phone" type="tel" placeholder="Ваш телефон *"
+                                        minlength="17" maxlength="17" required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts_input email">
+                                    <input name="f-email" type="text" placeholder="Ваша почта *" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="contacts_input message">
+                                    <textarea name="f-comment" placeholder="Ваше сообщение (не менее 20 символов) *"
+                                        minlength="20" required="required"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="my-4">Поля отмеченные <span>( * )</span> обязательны для заполнения!</p>
+                        <div class="checkbox mb-5">
+                            <input id="send" type="checkbox" checked="checked" />
+                            <label for="send">Нажимая кнопку "Отправить", вы принимаете <a href="data-processing.html"
+                                    target="_blank">условия обработки персональных данных.</a></label>
+                        </div>
+                        <button type="submit" class="active-btn"><span>Отправить сообщение</span> </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

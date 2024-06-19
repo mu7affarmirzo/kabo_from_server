@@ -1,0 +1,97 @@
+[2023-10-10 22:18:22 +0300] [163111] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:18:22 +0300] [163111] [INFO] Listening at: unix:/run/gunicorn.sock (163111)
+[2023-10-10 22:18:22 +0300] [163111] [INFO] Using worker: sync
+[2023-10-10 22:18:22 +0300] [163112] [INFO] Booting worker with pid: 163112
+[2023-10-10 22:18:22 +0300] [163113] [INFO] Booting worker with pid: 163113
+[2023-10-10 22:18:22 +0300] [163114] [INFO] Booting worker with pid: 163114
+[2023-10-10 19:21:39 +0000] [163113] [INFO] Worker exiting (pid: 163113)
+[2023-10-10 19:21:39 +0000] [163112] [INFO] Worker exiting (pid: 163112)
+[2023-10-10 19:21:39 +0000] [163114] [INFO] Worker exiting (pid: 163114)
+[2023-10-10 22:21:39 +0300] [163111] [INFO] Handling signal: term
+[2023-10-10 22:21:39 +0300] [163111] [ERROR] Worker (pid:163112) was sent SIGTERM!
+[2023-10-10 22:21:39 +0300] [163111] [ERROR] Worker (pid:163114) was sent SIGTERM!
+[2023-10-10 22:21:39 +0300] [163111] [ERROR] Worker (pid:163113) was sent SIGTERM!
+[2023-10-10 22:21:39 +0300] [163111] [INFO] Shutting down: Master
+[2023-10-10 22:21:39 +0300] [163157] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:21:39 +0300] [163157] [INFO] Listening at: unix:/run/gunicorn.sock (163157)
+[2023-10-10 22:21:39 +0300] [163157] [INFO] Using worker: sync
+[2023-10-10 22:21:39 +0300] [163158] [INFO] Booting worker with pid: 163158
+[2023-10-10 22:21:39 +0300] [163159] [INFO] Booting worker with pid: 163159
+[2023-10-10 22:21:39 +0300] [163160] [INFO] Booting worker with pid: 163160
+[2023-10-10 22:27:00 +0300] [163157] [INFO] Handling signal: term
+[2023-10-10 19:27:00 +0000] [163158] [INFO] Worker exiting (pid: 163158)
+[2023-10-10 19:27:00 +0000] [163159] [INFO] Worker exiting (pid: 163159)
+[2023-10-10 19:27:00 +0000] [163160] [INFO] Worker exiting (pid: 163160)
+[2023-10-10 22:27:00 +0300] [163157] [ERROR] Worker (pid:163158) was sent SIGTERM!
+[2023-10-10 22:27:00 +0300] [163157] [ERROR] Worker (pid:163160) was sent SIGTERM!
+[2023-10-10 22:27:00 +0300] [163157] [ERROR] Worker (pid:163159) was sent SIGTERM!
+[2023-10-10 22:27:00 +0300] [163157] [INFO] Shutting down: Master
+[2023-10-10 22:27:01 +0300] [163243] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:27:01 +0300] [163243] [INFO] Listening at: unix:/run/gunicorn.sock (163243)
+[2023-10-10 22:27:01 +0300] [163243] [INFO] Using worker: sync
+[2023-10-10 22:27:01 +0300] [163245] [INFO] Booting worker with pid: 163245
+[2023-10-10 22:27:01 +0300] [163246] [INFO] Booting worker with pid: 163246
+[2023-10-10 22:27:01 +0300] [163247] [INFO] Booting worker with pid: 163247
+[2023-10-10 22:27:56 +0300] [163243] [INFO] Handling signal: term
+[2023-10-10 19:27:56 +0000] [163245] [INFO] Worker exiting (pid: 163245)
+[2023-10-10 19:27:56 +0000] [163247] [INFO] Worker exiting (pid: 163247)
+[2023-10-10 19:27:56 +0000] [163246] [INFO] Worker exiting (pid: 163246)
+[2023-10-10 22:27:56 +0300] [163243] [ERROR] Worker (pid:163245) was sent SIGTERM!
+[2023-10-10 22:27:56 +0300] [163243] [ERROR] Worker (pid:163246) was sent SIGTERM!
+[2023-10-10 22:27:56 +0300] [163243] [ERROR] Worker (pid:163247) was sent SIGTERM!
+[2023-10-10 22:27:56 +0300] [163243] [INFO] Shutting down: Master
+[2023-10-10 22:27:56 +0300] [163258] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:27:56 +0300] [163258] [INFO] Listening at: unix:/run/gunicorn.sock (163258)
+[2023-10-10 22:27:56 +0300] [163258] [INFO] Using worker: sync
+[2023-10-10 22:27:56 +0300] [163259] [INFO] Booting worker with pid: 163259
+[2023-10-10 22:27:56 +0300] [163260] [INFO] Booting worker with pid: 163260
+[2023-10-10 22:27:56 +0300] [163261] [INFO] Booting worker with pid: 163261
+[2023-10-10 19:28:51 +0000] [163259] [INFO] Worker exiting (pid: 163259)
+[2023-10-10 19:28:51 +0000] [163260] [INFO] Worker exiting (pid: 163260)
+[2023-10-10 19:28:51 +0000] [163261] [INFO] Worker exiting (pid: 163261)
+[2023-10-10 22:28:51 +0300] [163258] [INFO] Handling signal: term
+[2023-10-10 22:28:51 +0300] [163258] [ERROR] Worker (pid:163261) was sent SIGTERM!
+[2023-10-10 22:28:51 +0300] [163258] [ERROR] Worker (pid:163260) was sent SIGTERM!
+[2023-10-10 22:28:51 +0300] [163258] [ERROR] Worker (pid:163259) was sent SIGTERM!
+[2023-10-10 22:28:51 +0300] [163258] [INFO] Shutting down: Master
+[2023-10-10 22:28:51 +0300] [163270] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:28:51 +0300] [163270] [INFO] Listening at: unix:/run/gunicorn.sock (163270)
+[2023-10-10 22:28:51 +0300] [163270] [INFO] Using worker: sync
+[2023-10-10 22:28:51 +0300] [163271] [INFO] Booting worker with pid: 163271
+[2023-10-10 22:28:51 +0300] [163272] [INFO] Booting worker with pid: 163272
+[2023-10-10 22:28:51 +0300] [163273] [INFO] Booting worker with pid: 163273
+[2023-10-10 22:28:58 +0300] [163270] [INFO] Handling signal: term
+[2023-10-10 19:28:58 +0000] [163271] [INFO] Worker exiting (pid: 163271)
+[2023-10-10 19:28:58 +0000] [163272] [INFO] Worker exiting (pid: 163272)
+[2023-10-10 22:28:58 +0300] [163270] [ERROR] Worker (pid:163272) was sent SIGTERM!
+[2023-10-10 19:28:58 +0000] [163273] [INFO] Worker exiting (pid: 163273)
+[2023-10-10 22:28:58 +0300] [163270] [ERROR] Worker (pid:163271) was sent SIGTERM!
+[2023-10-10 22:28:58 +0300] [163270] [INFO] Shutting down: Master
+[2023-10-10 22:28:58 +0300] [163306] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:28:58 +0300] [163306] [INFO] Listening at: unix:/run/gunicorn.sock (163306)
+[2023-10-10 22:28:58 +0300] [163306] [INFO] Using worker: sync
+[2023-10-10 22:28:58 +0300] [163307] [INFO] Booting worker with pid: 163307
+[2023-10-10 22:28:58 +0300] [163308] [INFO] Booting worker with pid: 163308
+[2023-10-10 22:28:59 +0300] [163309] [INFO] Booting worker with pid: 163309
+[2023-10-10 19:31:07 +0000] [163307] [INFO] Worker exiting (pid: 163307)
+[2023-10-10 19:31:07 +0000] [163308] [INFO] Worker exiting (pid: 163308)
+[2023-10-10 19:31:07 +0000] [163309] [INFO] Worker exiting (pid: 163309)
+[2023-10-10 22:31:07 +0300] [163306] [INFO] Handling signal: term
+[2023-10-10 22:31:07 +0300] [163306] [ERROR] Worker (pid:163308) was sent SIGTERM!
+[2023-10-10 22:31:07 +0300] [163306] [ERROR] Worker (pid:163309) was sent SIGTERM!
+[2023-10-10 22:31:07 +0300] [163306] [ERROR] Worker (pid:163307) was sent SIGTERM!
+[2023-10-10 22:31:07 +0300] [163306] [INFO] Shutting down: Master
+[2023-10-10 22:31:07 +0300] [163354] [INFO] Starting gunicorn 21.2.0
+[2023-10-10 22:31:07 +0300] [163354] [INFO] Listening at: unix:/run/gunicorn.sock (163354)
+[2023-10-10 22:31:07 +0300] [163354] [INFO] Using worker: sync
+[2023-10-10 22:31:07 +0300] [163355] [INFO] Booting worker with pid: 163355
+[2023-10-10 22:31:07 +0300] [163356] [INFO] Booting worker with pid: 163356
+[2023-10-10 22:31:07 +0300] [163357] [INFO] Booting worker with pid: 163357
+[2023-10-10 22:40:23 +0300] [163354] [INFO] Handling signal: term
+[2023-10-10 19:40:23 +0000] [163355] [INFO] Worker exiting (pid: 163355)
+[2023-10-10 19:40:23 +0000] [163357] [INFO] Worker exiting (pid: 163357)
+[2023-10-10 19:40:23 +0000] [163356] [INFO] Worker exiting (pid: 163356)
+[2023-10-10 22:40:23 +0300] [163354] [ERROR] Worker (pid:163355) was sent SIGTERM!
+[2023-10-10 22:40:23 +0300] [163354] [ERROR] Worker (pid:163357) was sent SIGTERM!
+[2023-10-10 22:40:23 +0300] [163354] [ERROR] Worker (pid:163356) was sent SIGTERM!
+[2023-10-10 22:40:23 +0300] [163354] [INFO] Shutting down: Master

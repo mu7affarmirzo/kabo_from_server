@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none"
+                    src="{% static 'promo/promo_header.mp4'%}"></video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{% trans 'КОНТАКТЫ' %}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'pagesstatic:home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            {% trans 'КОНТАКТЫ' %}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="contacts">
+            <div class="container">
+                <div class="section_content">
+                    <div class="map">
+                        <div style="width: 100%"><iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=HaYod-Alef%20Garden%20Bat%20Yam%20%D0%98%D0%B7%D1%80%D0%B0%D0%B8%D0%BB%D1%8C+(Kabo)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">best car gps</a></iframe></div>
+                    </div>
+                    <div class="row my-md-5 my-3">
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/address-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    {% trans 'Наш адрес' %}
+                                </h5>
+                                <span>Hatsor 6 /24 bat yam</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/mail-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    {% trans 'Наша почта' %}
+                                </h5>
+                                <span><a href="mailto:info@kabogroup.com">info@kabogroup.com</a></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contacts_list_item">
+                                <div class="contacts_icon">
+                                    <img src="{% static 'img/phone-w.svg' %}" alt="">
+                                </div>
+                                <h5 class="contacts_list_item_title">
+                                    {% trans 'Телефон' %}
+                                </h5>
+                                <span><a href="tel:0586723477">0586723477<br>0586366500</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="contacts_title">{% trans 'Связаться с Нами' %}</h2>
+                    <form action="{% url 'contacts:contacts' %}" method="post">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="contacts_input name">
+                                    <input name="full_name" id="name" type="text" placeholder="{% trans 'Ваше имя *' %}"
+                                        required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts_input phone">
+                                    <input id="phone" name="phone_number" type="tel" placeholder="{% trans 'Ваш телефон *' %}"
+                                        minlength="10" maxlength="17" required="required">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts_input email">
+                                    <input name="email" type="text" placeholder="{% trans 'Ваша почта *' %}" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="contacts_input message">
+                                    <textarea name="message" placeholder="{% trans 'Ваше сообщение (не менее 20 символов) *' %}"
+                                        minlength="20" required="required"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="my-4">{% trans 'Поля отмеченные' %} <span>( * )</span> {% trans 'обязательны для заполнения!' %}</p>
+                        <div class="checkbox mb-5">
+                            <input id="send" type="checkbox" checked="checked" />
+                            <label for="send">{% trans 'Нажимая кнопку "Отправить", вы принимаете ' %}<a href="data-processing.html"
+                                    target="_blank">{% trans 'условия обработки персональных данных.' %}</a></label>
+                        </div>
+                        <button type="submit" class="active-btn"><span>{% trans 'Отправить сообщение' %}</span> </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+    <header class="header_promo other_pages_header">
+        {% for prom in promo %}
+        <div class="header_promo_background" style="background-image: url('{{prom.image.url}}')"></div>
+        <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                    <source src="{{prom.pagePromo}}" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{{prom.name}}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            {{prom.name}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </header>
+
+        <section class="mission">
+            <div class="container">
+                <div class="section_content">
+                    <ul class="divisions">
+
+                        {% for block in blocks %}
+                            {% if forloop.counter0|mod:2 == 0 %}
+                                <li>
+                                    <div class="divisions_item first_animation invisible">
+                                        <div class="divisions_item_left">
+                                            <img src="{{block.image.url}}" alt="">
+                                        </div>
+                                        <div class="divisions_item_right">
+                                            <h5 class="company_name long_line_before">{{block.company_name}}</h5>
+                                            <h2>{{block.name}}</h2>
+                                            <p>{{block.text}}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <div class="divisions_item second_animation invisible">
+                                        <div class="divisions_item_right text_right">
+                                            <h5 class="company_name long_line_after">{{block.company_name}}</h5>
+                                            <h2>{{block.name}}</h2>
+                                            <p>{{block.text}}</p>
+                                        </div>
+                                        <div class="divisions_item_left rect_before">
+                                            <img src="{{block.image.url}}" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endif %}
+
+                        {% endfor %}
+
+
+                    </ul>
+                    <ul class="work_navi">
+                        <li><a href="">{% trans 'ПРЕДЫДУЩИЙ ПРОЕКТ' %}</a></li>
+                        <li><a href="">{% trans 'СЛЕДУЮЩИЙ ПРОЕКТ' %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}

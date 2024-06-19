@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+        <header class="header_promo other_pages_header">
+            <div class="header_promo_background" style="background-image: url('{% static 'img/promo.jpg' %}')"></div>
+            <div class="video_overlay"></div>
+            {% for prom in promo %}
+                <div class="header_promo_video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                        <source src="{{prom.promoURL}}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="header_promo_title">
+                    <h1><span>{% trans 'Vacancy' %}</span></h1>
+                    <ul class="header_promo_breadcrumbs">
+                        <li>
+                            <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                        </li>
+                        <li>
+                            <span>
+                                {{prom.title}}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </header>
+
+
+    {% for vacancy in vacancies %}
+
+
+    {% endfor %}
+
+
+
+
+    <section class="vacancy">
+        <div class="container">
+            <div class="section_content">
+                <div class="row">
+
+                    {% for vacancy in vacancies %}
+
+                        <div class="col-md-4">
+                            <a href="{% url 'abcompany:vacancy-individual' vacancy.slug %}" class="vacancy_item">
+                                <span class="">{{ vacancy.little_description }}</span>
+                                <h5>{{ vacancy.position}}</h5>
+                                <p>{{ vacancy.requirements}}</p>
+                            </a>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <header class="header_promo other_pages_header">
+        {% for prom in promo %}
+            <div class="header_promo_background" style="background-image: url('{{prom.imageURL}}')"></div>
+            <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                    <source src="{{prom.promoURL}}" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{{prom.name}}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            {{prom.name}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </header>
+
+
+    <!-- news section -->
+    <section class="news">
+        <div class="container">
+            <div class="section_content">
+                <div class="row">
+
+                    {% if news_posts %}
+                        {% for news_post in news_posts %}
+
+                                        {% if news_post %}
+
+                                        <div class="col-md-4 first_animation invisible">
+                                            <div class="news_item">
+                                                <a href="{% url 'news:news-individual' news_post.slug %}">
+                                                    <div class="news_image">
+                                                        <img src="{{news_post.image.url}}" alt="">
+                                                    </div>
+                                                    <div class="news_caption">
+                                                        <p class="news_date"> {{news_post.date_published}} </p>
+                                                        <h5>
+                                                            {{news_post.name}}
+                                                        </h5>
+                                                    </div>
+                                                    <a href="{% url 'news:news-individual' news_post.slug %}" class="active-btn mt-3"><span>Подробнее</span></a>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        {% else %}
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="card m-auto">
+                                                    <div class="card-body mt-2 mb-2">
+                                                        <h2 class="card-title">{% trans 'No results' %}</h2>
+                                                        <p class="card-text">{% trans 'There were no results matching the search:' %} "{{query}}"</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {% endif %}
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                </div>
+
+
+
+                <ul class="pagi first_animation invisible">
+                {% if news_posts.has_previous %}
+                    <li class="d-none">
+                      <a href="?{% if query %}q={{query}}&{% endif %}page={{ news_posts.previous_page_number }}">&laquo; Previous</a>
+                    </li>
+                {% endif %}
+
+                {% for i in news_posts.paginator.page_range %}
+                    {% if news_posts.number == i %}
+                        <li class="active"><a>{{ i }}</a></li>
+                    {% else %}
+                        <li><a href="?{% if query %}q={{query}}&{% endif %}page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if news_posts.has_next %}
+                    <li>
+                      <a href="?{% if query %}q={{query}}&{% endif %}page={{ news_posts.next_page_number }}">Next</a>
+                    </li>
+
+                    <li>
+                      <a href="?{% if query %}q={{query}}&{% endif %}page={{ news_posts.paginator.num_pages }}">Last &raquo;</a>
+                    </li>
+                {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+    <header class="header_promo other_pages_header">
+        {% for prom in promo %}
+        <div class="header_promo_background" style="background-image: url('{{prom.image.url}}')"></div>
+        <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                    <source src="{{prom.page_promo.url}}" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{{prom.name}}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            {{prom.name}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </header>
+
+
+
+    <section class="projects">
+        <div class="container">
+            <div class="section_content">
+                <div class="projects_list">
+
+                    {% for project in projects %}
+                        <div class="projects_item first_animation invisible">
+                            <a href="{% url 'projects:projects-individual' project.id %}">
+                                <span class="projects_img">
+                                    <img src="{{project.imageURL}}" alt="">
+                                </span>
+                                <span class="projects_caption">
+                                    <h5>{{project.name}}</h5>
+                                </span>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+    <header class="header_promo other_pages_header">
+        {% for prom in promo %}
+        <div class="header_promo_background" style="background-image: url('{{prom.image.url}}')"></div>
+        <div class="video_overlay"></div>
+            <div class="header_promo_video">
+                <video autoplay loop muted playsinline webkit-playsinline poster="#" preload="none">
+                    <source src="{{prom.pagePromo}}" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="header_promo_title">
+                <h1><span>{{prom.name}}</span></h1>
+                <ul class="header_promo_breadcrumbs">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans 'Главная' %}</a><i>/</i>
+                    </li>
+                    <li>
+                        <span>
+                            {{prom.name}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </header>
+
+
+    <section class="portfolio_page">
+        <div class="container">
+            <div class="section_content">
+                <div class="portfolio_list">
+                    {% for port in portfolio %}
+                        {% if forloop.counter0|mod:2 == 0 %}
+                            <a href="{% url 'portfolio:portfolio-individual' port.id %}" class="portfolio_text_left triangle_after second_animation invisible">
+                                <div class="left_col text_right">
+                                    <span class="portfolio_type_text">{{port.company_name}}</span>
+                                    <h2>
+                                        {{port.name}}
+                                    </h2>
+                                    <p>
+                                        {{ port.text }}
+                                    </p>
+                                    <span class="more"> <span class="play_icon"></span> {% trans 'УЗНАТЬ БОЛЬШЕ' %}</span>
+                                </div>
+                                <div class="right_col">
+                                    <div class="portfolio_img lines_before">
+                                        <img src="{{port.image.url}}" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'portfolio:portfolio-individual' port.id %}" class="portfolio_text_left triangle_before first_animation invisible">
+                                <div class="right_col">
+                                    <div class="portfolio_img pl-50 lines_after">
+                                        <img src="{{port.image.url}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="left_col text_left">
+                                    <span class="portfolio_type_text">{{port.company_name}}</span>
+                                    <h2>
+                                        {{port.name}}
+                                    </h2>
+                                    <p>
+                                        {{port.text}}
+                                    </p>
+                                    <span class="more"> <span class="play_icon"></span> {% trans 'УЗНАТЬ БОЛЬШЕ' %}</span>
+                                </div>
+                            </a>
+
+                        {% endif %}
+
+                    {% endfor %}
+
+
+                    <ul class="pagi first_animation invisible">
+                        <!-- display НАЗАД in second page -->
+                        <li class="d-none"><a href="">{% trans 'Назад' %}</a></li>
+                        <li class="active"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">{% trans 'ВПЕРЁД' %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
